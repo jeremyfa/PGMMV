@@ -636,6 +636,9 @@ bool IMGUIGLViewImpl::initWithRect(const std::string& viewName, Rect rect, float
 
     initGlew();
 
+    // Force VSync enabled to prevent screen tearing
+    glfwSwapInterval(1);
+
     // Enable point size by default.
     glEnable(GL_VERTEX_PROGRAM_POINT_SIZE);
 
